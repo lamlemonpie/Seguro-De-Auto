@@ -1,0 +1,61 @@
+.checkbox__container {
+  width: 20px;
+  height: 20px;
+}
+
+// /* Customize the label (the container) */
+.container {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px;
+
+  /* Hide the browser's default checkbox */
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    /* When the checkbox is checked, add a background color*/
+    &:checked ~ .checkmark {
+      background-color: $success-color;
+    }
+
+    /* Show the checkmark when checked */
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+
+  /* Style the checkmark/indicator */
+  .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+  }
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: $card-background-color;
+  border-radius: 4px;
+  border: 1px solid $success-color;
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
