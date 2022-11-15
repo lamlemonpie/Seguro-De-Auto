@@ -1,13 +1,14 @@
 import React from "react";
 import NavBar from "../../components/NavBar";
-import finalIllustration from "../../assets/final-illustration.png";
-import finalIllustrationSmall from "../../assets/final-illustration-small.png";
+import finalIllustration from "../../shared/assets/final-illustration.png";
+import finalIllustrationSmall from "../../shared/assets/final-illustration-small.png";
 
 export const Final = () => {
   return (
     <>
       <NavBar />
       <div className="final__container">
+        <div className="final__background-container" />
         <div className="final__image-container">
           <picture>
             <source media="(min-width: 768px)" srcSet={finalIllustration} />

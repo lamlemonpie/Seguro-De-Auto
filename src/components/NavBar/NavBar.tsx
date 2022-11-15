@@ -1,6 +1,6 @@
 import React from "react";
-import logoRimac from "../../assets/logo-rimac.png";
-import telephoneImage from "../../assets/phone.png";
+import logoRimac from "../../shared/assets/logo-rimac.png";
+import telephoneImage from "../../shared/assets/phone.png";
 
 export const NavBar = () => {
   return (
