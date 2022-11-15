@@ -2,9 +2,13 @@ import React from "react";
 import logoRimac from "../../shared/assets/logo-rimac.png";
 import telephoneImage from "../../shared/assets/phone.png";
 
-export const NavBar = () => {
+interface NavBarProps {
+  isTransparent?: Boolean;
+}
+
+export const NavBar: React.FC<NavBarProps> = ({ isTransparent = false }) => {
   return (
-    <div className="navbar">
+    <div className={isTransparent ? "navbar--transparent" : "navbar"}>
       <img src={logoRimac} alt="Logo Rimac" />
 
       <div className="navbar__telephone">
