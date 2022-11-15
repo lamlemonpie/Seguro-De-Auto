@@ -1,0 +1,66 @@
+.final__container {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $small-screen-width) {
+        flex-direction: row;
+    }
+
+
+}
+
+.final__image-container {
+    background-color: $main-background-color;
+}
+
+.final__image {
+    object-fit: fill;
+    height: 208px;
+    width: 100%;
+
+    @media screen and (min-width: $small-screen-width) {
+        width: 416px;
+        height: 448px;
+        object-fit: fill;
+    }
+    
+}
+
+.final__text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 32px;
+}
+
+.final__welcome-title {
+    font-size: 28px;
+    color: $text-primary-color;
+}
+
+.final__welcome-description {
+    font-size: 28px;
+    color: $text-subtitle-color;
+}
+
+.final__welcome-footnote-container {
+    margin-bottom: 40px;
+}
+
+.final__welcome-footnote--light {
+    font-size: 16px;
+    font-weight: 100;
+    columns: $text-default-color;
+}
+
+.final__welcome-footnote--regular {
+    font-size: 16px;
+    columns: $text-default-color;
+}
+
+.final__welcome-button  {
+    width: 100%;
+
+    @media screen and (min-width: $small-screen-width) {
+       width: 256px;
+    }
+}

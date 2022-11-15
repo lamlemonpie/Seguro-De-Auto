@@ -10,3 +10,9 @@
     align-items: center;
     justify-content: center;
 }
+
+.button--wide {
+    @extend .button--default;
+
+    width: 100%;
+}
