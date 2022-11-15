@@ -1,0 +1,27 @@
+.dropdown__container {
+  width: 100%;
+}
+
+.dropdown__selector {
+  width: 30%;
+  height: 56px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid $input-border-color;
+  box-sizing: border-box;
+  background-color: $card-background-color;
+  text-align-last: center;
+  vertical-align: top;
+
+  appearance: none;
+  background-image: url("../../shared/assets/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 50%;
+
+  padding-right: 16px;
+}
+
+.dropdown__input {
+  width: 70%;
+  border-radius: 0 4px 4px 0;
+}
