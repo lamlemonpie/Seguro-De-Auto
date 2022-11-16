@@ -1,27 +1,28 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 code {
-font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 $small-screen-width: 768px;
 
-$main-background-color: #FAFBFF;
-$card-background-color: #FFFFFF;
-$button-color: #FF1C44;
-$input-placeholder-color: #A9AFD9;
-$input-border-color: #D7DBF5;
+$main-background-color: #fafbff;
+$card-background-color: #ffffff;
+$home-background-color: #ecf0ff;
+$button-color: #ff1c44;
+$input-placeholder-color: #a9afd9;
+$input-border-color: #d7dbf5;
 
-$text-primary-color: #FF1C44;
-$text-default-color: #676F8F;
-$text-subtitle-color: #494F66;
-$phone-color: #6F7DFF;
-$success-color: #389E0D;
+$text-primary-color: #ff1c44;
+$text-default-color: #676f8f;
+$text-subtitle-color: #494f66;
+$phone-color: #6f7dff;
+$success-color: #389e0d;
