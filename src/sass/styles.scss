@@ -1,13 +1,15 @@
 // UI Settings
-@import './base/settings';
+@import "./base/settings";
 
 // Components
-@import './components/navbar';
-@import './components/button';
-@import './components/input';
-@import './components/dropdown';
-@import './components/checkbox';
+@import "./components/navbar";
+@import "./components/button";
+@import "./components/input";
+@import "./components/dropdown";
+@import "./components/checkbox";
+@import "./components/inputnumber";
 
 // Pages
-@import './pages/home';
-@import './pages/final';
+@import "./pages/home";
+@import "./pages/final";
+@import "./pages/plan";

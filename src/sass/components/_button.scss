@@ -1,18 +1,22 @@
 .button--default {
-    height: 56px;
-    width: 192px;
-    background-color: $button-color;
-    text-transform: uppercase;
-    color: #ffffff;
-    border-radius: 8px;
+  height: 56px;
+  width: 192px;
+  background-color: $button-color;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 8px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button--wide {
-    @extend .button--default;
+  @extend .button--default;
 
-    width: 100%;
+  width: 100%;
+}
+
+.button--small {
+  height: 44px;
 }

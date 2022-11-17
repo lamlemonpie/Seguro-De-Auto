@@ -1,0 +1,39 @@
+import React from "react";
+import iconMinus from "../../shared/assets/input-minus.png";
+import iconPlus from "../../shared/assets/input-plus.png";
+
+interface InputNumberProps {
+  initialValue?: number;
+  minValue?: number;
+  maxValue?: number;
+  prefix?: string;
+}
+
+export const InputNumber: React.FC<InputNumberProps> = ({
+  initialValue = 0,
+  minValue = 0,
+  maxValue = Number.MAX_VALUE,
+  prefix = "",
+}) => {
+  const [value, setValue] = React.useState<number>(initialValue);
+
+  const handleMinus = () => {
+    if (value > minValue) {
+      setValue(value - 100);
+    }
+  };
+
+  const handlePlus = () => {
+    if (value < maxValue) {
+      setValue(value + 100);
+    }
+  };
+
+  return (
+    <div className="inputnumber">
+      <img src={iconMinus} onClick={handleMinus} alt="-" />
+      <p className="inputnumber__value">{`${prefix}${value}`}</p>
+      <img src={iconPlus} onClick={handlePlus} alt="+" />
+    </div>
+  );
+};
