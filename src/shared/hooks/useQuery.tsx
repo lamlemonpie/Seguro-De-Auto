@@ -1,4 +1,5 @@
 import React from "react";
+import client from "../client";
 import { useUser } from "../contexts/UserProvider";
 import endpoints from "../endpoints";
 
@@ -20,17 +21,23 @@ export const useQuery = () => {
   );
 
   const getUserQuery = () => {
-    runAsyncFunc(endpoints.getRandomUser, (data: any) => {
-      if (data["name"]) {
-        const name: string = data["name"];
-        const firstName = name.split(" ")[0];
-        setUserName(firstName);
-      }
+    runAsyncFunc(
+      client(
+        "GET",
+        endpoints.getRandomUser + (Math.floor(Math.random() * 10) + 1)
+      ),
+      (data: any) => {
+        if (data["name"]) {
+          const name: string = data["name"];
+          const firstName = name.split(" ")[0];
+          setUserName(firstName);
+        }
 
-      if (data["email"]) {
-        setEmail(data["email"]);
+        if (data["email"]) {
+          setEmail(data["email"]);
+        }
       }
-    });
+    );
   };
 
   return { getUserQuery };
