@@ -13,7 +13,6 @@ export const HomeForm = () => {
   const [acceptedTerms, setAcceptedTerms] = React.useState(false);
 
   const handleAcceptedTerms = () => {
-    console.log("changing");
     setAcceptedTerms(!acceptedTerms);
   };
 
