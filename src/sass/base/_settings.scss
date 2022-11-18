@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+$small-screen-width: 900px;
+
+$main-background-color: #fafbff;
+$card-background-color: #ffffff;
+$home-background-color: #ecf0ff;
+$button-color: #ff1c44;
+$input-placeholder-color: #a9afd9;
+$input-border-color: #d7dbf5;
+$price-border-color: #c5cbe0;
+$car-border-color: #f0f2fa;
+$bar-border-color: #edeffc;
+
+$text-primary-color: #ff1c44;
+$text-default-color: #676f8f;
+$text-subtitle-color: #494f66;
+$text-stepper-color: #ffffff;
+$phone-color: #6f7dff;
+$success-color: #389e0d;
+$progress-color: #6464fa;

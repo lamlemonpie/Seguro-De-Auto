@@ -1,0 +1,16 @@
+.input--default {
+    height: 56px;
+    border-radius: 4px;
+    border: 1px solid $input-border-color;
+    box-sizing: border-box;
+    padding: 0 16px;
+    font-size: 16px;
+
+    &::placeholder {
+        color: $input-placeholder-color;
+    }
+
+    &:focus-visible, :focus {
+        outline: none;
+    }
+}

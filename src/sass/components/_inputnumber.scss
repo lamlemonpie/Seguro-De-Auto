@@ -1,0 +1,32 @@
+.inputnumber {
+  height: 56px;
+  width: 100%;
+  border: 1px solid $price-border-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 36px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    margin: 0 16px;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: $small-screen-width) {
+    width: 160px;
+    margin-bottom: 0;
+  }
+}
+
+.inputnumber__value {
+  font-size: 16px;
+  color: $text-subtitle-color;
+}

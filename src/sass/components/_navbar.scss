@@ -1,0 +1,66 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 32px;
+  background-color: $card-background-color;
+  border-bottom: 1px solid $input-border-color;
+
+  @media screen and (min-width: $small-screen-width) {
+    height: 64px;
+    padding: 0 120px;
+  }
+}
+
+.navbar--transparent {
+  @extend .navbar;
+
+  border: none;
+  background-color: rgba($color: #ffffff, $alpha: 0);
+}
+
+.navbar__telephone {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__subtitle {
+  display: none;
+
+  @media screen and (min-width: $small-screen-width) {
+    display: block;
+    color: $text-default-color;
+    font-size: 12px;
+    margin-right: 20px;
+  }
+}
+
+.navbar__telephone-icon {
+  width: 20px;
+  height: 20px;
+
+  @media screen and (min-width: $small-screen-width) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.navbar__telephone-number {
+  display: none;
+
+  @media screen and (min-width: $small-screen-width) {
+    display: block;
+    color: $phone-color;
+    font-size: 14px;
+  }
+}
+
+.navbar__telephone-quote {
+  color: $phone-color;
+  font-size: 14px;
+
+  @media screen and (min-width: $small-screen-width) {
+    display: none;
+  }
+}

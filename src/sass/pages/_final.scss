@@ -1,0 +1,91 @@
+.final__container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: calc(100vh - 64px);
+
+    @media screen and (min-width: $small-screen-width) {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+}
+
+.final__background-container {
+    background-color: $main-background-color;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    height: 100%;
+    width: 33.3%;
+
+
+    @media screen and (max-width: $small-screen-width) {
+       display: none;
+    }
+}
+
+.final__image-container {
+
+    @media screen and (min-width: $small-screen-width) {
+    display: flex;
+    align-items: center;
+    z-index: 9;
+    }
+}
+
+.final__image {
+    object-fit: fill;
+    height: 208px;
+    width: 100%;
+
+    @media screen and (min-width: $small-screen-width) {
+        width: 416px;
+        height: 448px;
+        object-fit: fill;
+    }
+    
+}
+
+.final__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 32px;
+}
+
+.final__welcome-title {
+    font-size: 28px;
+    color: $text-primary-color;
+}
+
+.final__welcome-description {
+    font-size: 28px;
+    color: $text-subtitle-color;
+}
+
+.final__welcome-footnote-container {
+    margin-bottom: 40px;
+}
+
+.final__welcome-footnote--light {
+    color: $text-default-color;
+    font-size: 16px;
+    font-weight: 100;
+    columns: $text-default-color;
+}
+
+.final__welcome-footnote--regular {
+    color: $text-default-color;
+    font-size: 16px;
+    columns: $text-default-color;
+}
+
+.final__welcome-button  {
+    width: 100%;
+
+    @media screen and (min-width: $small-screen-width) {
+       width: 256px;
+    }
+}
