@@ -14,7 +14,7 @@ export const Plan = () => {
 
         <Configuration />
 
-        <Amount price={35} />
+        <Amount />
       </div>
     </div>
   );

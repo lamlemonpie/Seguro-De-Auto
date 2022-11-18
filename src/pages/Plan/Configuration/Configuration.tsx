@@ -8,8 +8,11 @@ import runoverIcon from "../../../shared/assets/icon-runover.png";
 import iconBack from "../../../shared/assets/icon-back-red.png";
 import { NavLink } from "react-router-dom";
 import paths from "../../../shared/routes/paths";
+import { useUser } from "../../../shared/contexts/UserProvider";
 
 export const Configuration = () => {
+  const { carPlate } = useUser();
+
   return (
     <div className="plan__configuration-container">
       <div className="plan__description-container">
@@ -32,7 +35,7 @@ export const Configuration = () => {
         <div className="plan__car-background" />
         <div className="plan__car-container">
           <div className="plan__car-description">
-            <p className="plan__car-plate">Placa: C2U-114 </p>
+            <p className="plan__car-plate">Placa: {carPlate}</p>
             <p className="plan__car-model">Wolkswagen 2019 Golf</p>
           </div>
           <picture>

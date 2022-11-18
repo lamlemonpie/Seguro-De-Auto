@@ -2,18 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../../../components/Button";
 import checkGreen from "../../../shared/assets/check-green.png";
+import { useUser } from "../../../shared/contexts/UserProvider";
 import paths from "../../../shared/routes/paths";
 
-interface AmountProps {
-  price: number;
-}
+export const Amount: React.FC = () => {
+  const { planPrice } = useUser();
 
-export const Amount: React.FC<AmountProps> = ({ price }) => {
   return (
     <div className="plan__amount-container">
       <div className="plan__price">
         <p className="plan__price-title">Monto</p>
-        <p className="plan__price-value">{`$${price}.00`}</p>
+        <p className="plan__price-value">{`$${planPrice}.00`}</p>
         <p className="plan__price-recurrent--small">Mensual</p>
         <p className="plan__price-recurrent--large">mensuales</p>
       </div>
