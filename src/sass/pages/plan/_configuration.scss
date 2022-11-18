@@ -10,7 +10,7 @@
   background-color: $main-background-color;
   padding: 0 32px;
   position: relative;
-  z-index: -999;
+  // z-index: -999;
 
   @media screen and (min-width: $small-screen-width) {
     background: none;
@@ -352,6 +352,10 @@
 
     * {
       margin-right: 16px;
+    }
+
+    a {
+      margin: 0;
     }
   }
 }

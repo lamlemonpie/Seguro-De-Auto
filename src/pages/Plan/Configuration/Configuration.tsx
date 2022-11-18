@@ -6,13 +6,18 @@ import theftIcon from "../../../shared/assets/icon-theft.png";
 import damageIcon from "../../../shared/assets/icon-damage.png";
 import runoverIcon from "../../../shared/assets/icon-runover.png";
 import iconBack from "../../../shared/assets/icon-back-red.png";
+import { NavLink } from "react-router-dom";
+import paths from "../../../shared/routes/paths";
 
 export const Configuration = () => {
   return (
     <div className="plan__configuration-container">
       <div className="plan__description-container">
         <div className="plan__back-container">
-          <img src={iconBack} alt="Back" />
+          <NavLink to={paths.root}>
+            <img src={iconBack} alt="Back" />
+          </NavLink>
+
           <p>Volver</p>
         </div>
 

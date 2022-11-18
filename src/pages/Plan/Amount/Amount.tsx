@@ -1,6 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Button from "../../../components/Button";
 import checkGreen from "../../../shared/assets/check-green.png";
+import paths from "../../../shared/routes/paths";
 
 interface AmountProps {
   price: number;
@@ -41,7 +43,9 @@ export const Amount: React.FC<AmountProps> = ({ price }) => {
         </div>
       </div>
 
-      <Button text="LO QUIERO" size="small" />
+      <Button size="small">
+        <NavLink to={paths.final}>LO QUIERO</NavLink>
+      </Button>
     </div>
   );
 };

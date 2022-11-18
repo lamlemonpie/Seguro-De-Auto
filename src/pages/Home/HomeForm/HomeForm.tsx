@@ -1,6 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import Button from "../../../components/Button";
 import Checkbox from "../../../components/Checkbox";
 import Dropdown from "../../../components/Dropdown";
+import paths from "../../../shared/routes/paths";
 
 export const HomeForm = () => {
   return (
@@ -27,7 +30,10 @@ export const HomeForm = () => {
               .
             </p>
           </div>
-          <div className="button--wide home__button">COTÍZALO</div>
+
+          <Button isWide className="home__button">
+            <NavLink to={paths.plan}>COTÍZALO</NavLink>
+          </Button>
         </div>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logoRimac from "../../shared/assets/logo-rimac.png";
 import telephoneImage from "../../shared/assets/phone.png";
+import paths from "../../shared/routes/paths";
 
 interface NavBarProps {
   isTransparent?: Boolean;
@@ -9,7 +11,9 @@ interface NavBarProps {
 export const NavBar: React.FC<NavBarProps> = ({ isTransparent = false }) => {
   return (
     <div className={isTransparent ? "navbar--transparent" : "navbar"}>
-      <img src={logoRimac} alt="Logo Rimac" />
+      <NavLink to={paths.root}>
+        <img src={logoRimac} alt="Logo Rimac" />
+      </NavLink>
 
       <div className="navbar__telephone">
         <p className="navbar__subtitle">¿Tienes alguna duda?</p>
