@@ -1,14 +1,18 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Button";
 import Checkbox from "../../../components/Checkbox";
 import Dropdown from "../../../components/Dropdown";
 import { useUser } from "../../../shared/contexts/UserProvider";
+import { useQuery } from "../../../shared/hooks/useQuery";
 import paths from "../../../shared/routes/paths";
 
 export const HomeForm = () => {
+  const navigate = useNavigate();
   const { carPlate, setCarPlate, identifier, setIdentifier, phone, setPhone } =
     useUser();
+
+  const { getUserQuery } = useQuery();
 
   const [acceptedTerms, setAcceptedTerms] = React.useState(false);
 
@@ -32,6 +36,11 @@ export const HomeForm = () => {
     const newValue = e.target.value;
 
     setPhone(newValue);
+  };
+
+  const getUser = () => {
+    getUserQuery();
+    navigate(paths.plan);
   };
 
   return (
@@ -80,9 +89,12 @@ export const HomeForm = () => {
             </p>
           </div>
 
-          <Button isWide className="home__button">
-            <NavLink to={paths.plan}>COTÍZALO</NavLink>
-          </Button>
+          <Button
+            text="COTÍZALO"
+            isWide
+            className="home__button"
+            onClick={getUser}
+          />
         </div>
       </div>
     </div>

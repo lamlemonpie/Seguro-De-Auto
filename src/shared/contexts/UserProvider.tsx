@@ -23,6 +23,8 @@ interface SetInsuranceActiveProps {
 interface ContextValueTypes {
   carPlate: string;
   identifier: string;
+  userName: string;
+  email: string;
   phone: string;
   basePlanPrice: number;
   planPrice: number;
@@ -31,6 +33,8 @@ interface ContextValueTypes {
   insuranceAmount: number;
   setCarPlate: React.Dispatch<React.SetStateAction<string>>;
   setIdentifier: React.Dispatch<React.SetStateAction<string>>;
+  setUserName: React.Dispatch<React.SetStateAction<string>>;
+  setEmail: React.Dispatch<React.SetStateAction<string>>;
   setPhone: React.Dispatch<React.SetStateAction<string>>;
   setPlanPrice: React.Dispatch<React.SetStateAction<number>>;
   setInsuranceAmout: React.Dispatch<React.SetStateAction<number>>;
@@ -57,6 +61,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [phone, setPhone] = React.useState("");
   const [planPrice, setPlanPrice] = React.useState(20);
   const [insuranceAmount, setInsuranceAmout] = React.useState(12500);
+  const [userName, setUserName] = React.useState("");
+  const [email, setEmail] = React.useState("");
 
   const [insurances, setInsurances] = React.useState(insurancesObject);
   const [insuranceDisabled, setInsuranceDisabled] = React.useState(false);
@@ -121,6 +127,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     carPlate,
     identifier,
     phone,
+    userName,
+    email,
     basePlanPrice,
     planPrice,
     insuranceAmount,
@@ -129,6 +137,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     insurances,
     setCarPlate,
     setPhone,
+    setUserName,
+    setEmail,
     setIdentifier,
     setPlanPrice,
     setInsuranceAmout,

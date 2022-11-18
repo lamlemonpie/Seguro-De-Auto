@@ -15,6 +15,7 @@ export const Configuration = () => {
     insuranceAmount,
     setInsuranceAmout,
     insurances,
+    userName,
   } = useUser();
 
   return (
@@ -29,7 +30,7 @@ export const Configuration = () => {
         </div>
 
         <p className="plan__description-title--large">
-          ¡Hola, <span> Juan!</span>
+          ¡Hola, <span> {userName}!</span>
         </p>
         <p className="plan__description-title--small">Mira las coberturas</p>
         <p className="plan__description-subtitle">

@@ -6,6 +6,7 @@ interface ButtonProps {
   size?: "small" | "normal";
   className?: string;
   children?: React.ReactNode;
+  onClick?: () => void;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -14,12 +15,14 @@ export const Button: React.FC<ButtonProps> = ({
   size = "normal",
   className,
   children,
+  onClick,
 }) => {
   return (
     <div
       className={`button button--${
         isWide ? "wide" : "default"
       } button--${size} ${className}`}
+      onClick={onClick}
     >
       {text}
       {children}

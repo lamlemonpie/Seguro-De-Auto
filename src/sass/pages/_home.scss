@@ -127,9 +127,11 @@
 
 .home__button {
   width: 100%;
+  margin-top: 16px;
 
   @media screen and (min-width: $small-screen-width) {
     width: 192px;
+    margin-top: 24px;
   }
 }
 
