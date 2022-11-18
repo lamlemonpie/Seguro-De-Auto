@@ -1,5 +1,4 @@
 import React from "react";
-import planIconBack from "../../../shared/assets/icon-back-gray.png";
 import { useViewport } from "../../../shared/contexts/ViewportProvider";
 import StepperLarge from "./StepperLarge";
 import StepperSmall from "./StepperSmall";

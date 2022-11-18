@@ -1,6 +1,4 @@
 import React from "react";
-import Checkbox from "../../components/Checkbox";
-import Dropdown from "../../components/Dropdown";
 import NavBar from "../../components/NavBar";
 import HomeDescription from "./HomeDescription";
 import HomeForm from "./HomeForm";
