@@ -151,3 +151,10 @@
     width: calc(100vw - 536px);
   }
 }
+
+.home__validation-text {
+  color: $text-primary-color;
+  font-size: 12px;
+
+  margin: 0;
+}
