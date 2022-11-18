@@ -6,17 +6,27 @@ import Dropdown from "../../../components/Dropdown";
 import paths from "../../../shared/routes/paths";
 
 export const HomeForm = () => {
+  const [acceptedTerms, setAcceptedTerms] = React.useState(false);
+
+  const handleAcceptedTerms = () => {
+    console.log("changing");
+    setAcceptedTerms(!acceptedTerms);
+  };
+
   return (
     <div className="home__form_bucket">
       <div className="home__form-container">
         <p className="home__form-title">Déjanos tus datos</p>
 
         <div className="home__form">
-          <Dropdown />
+          <Dropdown placeholder="Nro. de doc" />
           <input className="input--default" type="text" placeholder="Celular" />
           <input className="input--default" type="text" placeholder="Placa" />
           <div className="home__checkbox-container">
-            <Checkbox />
+            <Checkbox
+              checked={acceptedTerms}
+              handleCheck={handleAcceptedTerms}
+            />
 
             <p className="home__checbox-text">
               Acepto la{" "}
