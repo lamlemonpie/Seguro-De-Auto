@@ -1,49 +1,41 @@
-# Seguro-De-Auto
-Hacking Challenge de Seguro de Auto
+# Seguro De Autos
+Hacking Challenge de Seguro de Autos realizado en React con SASS.
 
-# Getting Started with Create React App
+## Scripts Disponibles
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+En el directorio del proyecto ejecutar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Caracteristicas desarrolladas
+- El proyecto es capaz de validad los campos de inicio
+- El proyecto es capaz de obtener un usuario desde el endpoint sugerido
+- El proyecto es capaz de mostrar diferentes componentes en base al tamaño de pantalla
+- El proyecto es capaz de calcular el total de coberturas seleccionadas
+- El proyecto es capaz de eliminar coberturas de acuerdo a la condición pedida
+- El proyecto es capaz de mantener datos desde el flujo inicial hasta el final
+- El proyecto posee una estructura de archivos orientada a las caracteristicas (feature based)
+- El proyecto no es capaz de leer datos del local storage.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Consideraciones
+- Se tomaron libertades al momento de usar tamaños intermedios de pantalla (algunos componentes se expanden a decisión del desarrollador ya que no poseen diseño explicito)
+- Ciertos elementos no poseen funcionalidad ya que no se describen estos en el diseño (tabs, botones de la ventana de gracias, telefono, etc)
+- Se encontraron algunas inconsistencias en la colocación del footer, se procedió a colocarlo igual que en el diseño.
+- Algunos iconos fueron usados directamente del diseño (switches, flechas y checkbox)
 
-### `npm test`
+## Retos
+- Ciertos componentes necesitaban aparecer en cierto tamaño de pantalla (tenia versiones diferentes en distintas ubicaciones del codigo: switch, ver mas, etc.), se creó el hook `useViewport` para poder comparar correctamente desde React a la par de media queries para los estilos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Capturas de Pantalla
+# Mobile
+![image](https://user-images.githubusercontent.com/16145739/202700484-003e29a8-3455-4ce3-abd9-115da649c205.png)
+![image](https://user-images.githubusercontent.com/16145739/202700586-0da966d4-0469-4089-8e63-89dfa17b5db3.png)
+![image](https://user-images.githubusercontent.com/16145739/202700616-5c907178-eafc-46f7-8537-973da27664f1.png)
+![image](https://user-images.githubusercontent.com/16145739/202700890-a7286d03-0b66-43e7-a6b7-c1a4301691cb.png)
 
-### `npm run build`
+# Desktop
+![image](https://user-images.githubusercontent.com/16145739/202701010-e3d53915-43c5-4def-b4dd-55179cf24671.png)
+![image](https://user-images.githubusercontent.com/16145739/202700832-d7f2110b-775e-472e-b86f-0f17865d8159.png)
+![image](https://user-images.githubusercontent.com/16145739/202700959-51bfc0ea-19c1-4d02-8917-bd2a28176d1e.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
