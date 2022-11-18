@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar";
 import finalIllustration from "../../shared/assets/final-illustration.png";
 import finalIllustrationSmall from "../../shared/assets/final-illustration-small.png";
 import { useUser } from "../../shared/contexts/UserProvider";
+import Footer from "../../components/Footer";
 
 export const Final = () => {
   const { email } = useUser();
@@ -14,7 +15,7 @@ export const Final = () => {
         <div className="final__background-container" />
         <div className="final__image-container">
           <picture>
-            <source media="(min-width: 768px)" srcSet={finalIllustration} />
+            <source media="(min-width: 900px)" srcSet={finalIllustration} />
             <img
               src={finalIllustrationSmall}
               alt="Final Illustration"
@@ -45,6 +46,8 @@ export const Final = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };
