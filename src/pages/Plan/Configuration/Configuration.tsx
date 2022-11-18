@@ -2,16 +2,20 @@ import React from "react";
 import InputNumber from "../../../components/InputNumber";
 import Insurance from "./Insurance";
 import planIllustrationSmall from "../../../shared/assets/plan-illustration-small.png";
-import theftIcon from "../../../shared/assets/icon-theft.png";
-import damageIcon from "../../../shared/assets/icon-damage.png";
-import runoverIcon from "../../../shared/assets/icon-runover.png";
 import iconBack from "../../../shared/assets/icon-back-red.png";
 import { NavLink } from "react-router-dom";
 import paths from "../../../shared/routes/paths";
 import { useUser } from "../../../shared/contexts/UserProvider";
 
 export const Configuration = () => {
-  const { carPlate } = useUser();
+  const {
+    carPlate,
+    insuranceAmountMin,
+    insuranceAmountMax,
+    insuranceAmount,
+    setInsuranceAmout,
+    insurances,
+  } = useUser();
 
   return (
     <div className="plan__configuration-container">
@@ -55,10 +59,11 @@ export const Configuration = () => {
         </div>
 
         <InputNumber
-          initialValue={14300}
-          minValue={12500}
-          maxValue={16500}
+          minValue={insuranceAmountMin}
+          maxValue={insuranceAmountMax}
           prefix="$"
+          value={insuranceAmount}
+          onChange={setInsuranceAmout}
         />
       </div>
 
@@ -74,38 +79,19 @@ export const Configuration = () => {
         </div>
 
         <div className="plan__car-coverage">
-          <Insurance
-            icon={theftIcon}
-            title="Llanta robada"
-            text="He salido de casa a las cuatro menos cinco para ir a la
-          academia de ingles de mi pueblo (Sant Cugat, al lado de
-          Barcelona) con mi bici, na llego a la academia que está en el
-          centro del pueblo en una plaza medio-grande y dejo donde
-          siempre la bici atada con una pitón a un sitio de esos de
-          poner las bicis"
-          />
-
-          <Insurance
-            icon={damageIcon}
-            title="Choque y/o pasarte la luz roja"
-            text="He salido de casa a las cuatro menos cinco para ir a la
-          academia de ingles de mi pueblo (Sant Cugat, al lado de
-          Barcelona) con mi bici, na llego a la academia que está en el
-          centro del pueblo en una plaza medio-grande y dejo donde
-          siempre la bici atada con una pitón a un sitio de esos de
-          poner las bicis"
-          />
-
-          <Insurance
-            icon={runoverIcon}
-            title="Atropello en la vía Evitamiento"
-            text="He salido de casa a las cuatro menos cinco para ir a la
-          academia de ingles de mi pueblo (Sant Cugat, al lado de
-          Barcelona) con mi bici, na llego a la academia que está en el
-          centro del pueblo en una plaza medio-grande y dejo donde
-          siempre la bici atada con una pitón a un sitio de esos de
-          poner las bicis"
-          />
+          {Object.entries(insurances).map(
+            ([key, value]) =>
+              value.isAvailable && (
+                <Insurance
+                  key={key}
+                  id={value.id}
+                  icon={value.icon}
+                  price={value.price}
+                  title={value.name}
+                  text={value.description}
+                />
+              )
+          )}
         </div>
       </div>
     </div>
