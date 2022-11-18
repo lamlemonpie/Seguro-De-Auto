@@ -3,14 +3,24 @@ import { useViewport } from "../../../../shared/contexts/ViewportProvider";
 import InsuranceHeader from "./InsuranceHeader";
 import ShowMoreIndicator from "./ShowMoreIndicator";
 import AddButton from "./AddButton";
+import { useUser } from "../../../../shared/contexts/UserProvider";
 
 interface InsuranceProps {
+  id: string;
   icon: string;
   title: string;
   text: string;
+  price: number;
 }
 
-export const Insurance: React.FC<InsuranceProps> = ({ icon, title, text }) => {
+export const Insurance: React.FC<InsuranceProps> = ({
+  id,
+  icon,
+  title,
+  text,
+  price,
+}) => {
+  const { setInsuranceActive } = useUser();
   const { width, small_screen } = useViewport();
   const [more, setMore] = React.useState(false);
 
@@ -21,6 +31,8 @@ export const Insurance: React.FC<InsuranceProps> = ({ icon, title, text }) => {
   const [active, setActive] = React.useState(false);
 
   const handleActive = () => {
+    const newValue = !active;
+    setInsuranceActive({ id, value: newValue });
     setActive(!active);
   };
 

@@ -1,6 +1,16 @@
 import React from "react";
 
-export const Dropdown = () => {
+interface DropdownProps {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder: string;
+}
+
+export const Dropdown: React.FC<DropdownProps> = ({
+  placeholder,
+  value,
+  onChange,
+}) => {
   return (
     <div className="dropdown__container">
       <select className="dropdown__selector">
@@ -10,7 +20,9 @@ export const Dropdown = () => {
       <input
         className="input--default dropdown__input"
         type="text"
-        placeholder="Nro. de doc"
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
       />
     </div>
   );

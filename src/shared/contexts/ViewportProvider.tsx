@@ -12,7 +12,7 @@ interface ViewportProviderProps {
   children?: ReactNode;
 }
 
-const viewportContext = React.createContext<ContextValueTypes | null>(null);
+const ViewportContext = React.createContext<ContextValueTypes | null>(null);
 
 export const ViewportProvider: React.FC<ViewportProviderProps> = ({
   children,
@@ -31,16 +31,16 @@ export const ViewportProvider: React.FC<ViewportProviderProps> = ({
   }, []);
 
   return (
-    <viewportContext.Provider
+    <ViewportContext.Provider
       value={{ width, height, small_screen: SMALL_SCREEN }}
     >
       {children}
-    </viewportContext.Provider>
+    </ViewportContext.Provider>
   );
 };
 
 export const useViewport = () => {
-  const context = React.useContext(viewportContext);
+  const context = React.useContext(ViewportContext);
 
   if (context === null) {
     throw new Error("useViewport must be used within a ViewportProvider");

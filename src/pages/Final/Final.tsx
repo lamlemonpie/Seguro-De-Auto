@@ -2,8 +2,11 @@ import React from "react";
 import NavBar from "../../components/NavBar";
 import finalIllustration from "../../shared/assets/final-illustration.png";
 import finalIllustrationSmall from "../../shared/assets/final-illustration-small.png";
+import { useUser } from "../../shared/contexts/UserProvider";
 
 export const Final = () => {
+  const { email } = useUser();
+
   return (
     <>
       <NavBar />
@@ -34,9 +37,7 @@ export const Final = () => {
                 Enviaremos la confirmación de compra de tu Plan Vehícular
                 Tracking a tu correo:
               </p>
-              <p className="final__welcome-footnote--regular">
-                joel.sanchez@gmail.com
-              </p>
+              <p className="final__welcome-footnote--regular">{email}</p>
             </div>
             <div className="button--default final__welcome-button">
               cómo usar mi seguro
