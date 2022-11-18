@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
 import HomeDescription from "./HomeDescription";
 import HomeForm from "./HomeForm";
@@ -15,6 +16,8 @@ export const Home: React.FC = () => {
 
         <HomeForm />
       </div>
+
+      <Footer isTransparent />
     </div>
   );
 };

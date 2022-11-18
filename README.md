@@ -9,7 +9,7 @@ En el directorio del proyecto ejecutar:
 
 ## Caracteristicas desarrolladas
 - El proyecto es capaz de validad los campos de inicio
-- El proyecto es capaz de obtener un usuario desde el endpoint sugerido
+- El proyecto es capaz de obtener un usuario aleatorio desde el endpoint sugerido
 - El proyecto es capaz de mostrar diferentes componentes en base al tamaño de pantalla
 - El proyecto es capaz de calcular el total de coberturas seleccionadas
 - El proyecto es capaz de eliminar coberturas de acuerdo a la condición pedida

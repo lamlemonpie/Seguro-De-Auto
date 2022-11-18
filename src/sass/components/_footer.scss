@@ -1,0 +1,30 @@
+.footer--default {
+  height: 76px;
+  border-top: 1px solid $input-border-color;
+  box-sizing: border-box;
+
+  font-size: 12px;
+  color: $input-placeholder-color;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 32px;
+
+  @media screen and (min-width: $small-screen-width) {
+    display: none;
+    padding-left: 100px;
+  }
+}
+
+.footer--transparent {
+  @extend .footer--default;
+
+  display: none;
+
+  @media screen and (min-width: $small-screen-width) {
+    border: none;
+    background-color: rgba($color: #ffffff, $alpha: 0);
+    display: flex;
+  }
+}
