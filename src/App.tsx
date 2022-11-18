@@ -1,9 +1,13 @@
 import React from "react";
 import Home from "./pages/Home";
-import Plan from "./pages/Plan";
+import { ViewportProvider } from "./shared/contexts/ViewportProvider";
 
 const App = () => {
-  return <Plan />;
+  return (
+    <ViewportProvider>
+      <Home />
+    </ViewportProvider>
+  );
 };
 
 export default App;

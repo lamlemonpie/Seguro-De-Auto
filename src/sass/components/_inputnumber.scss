@@ -2,6 +2,7 @@
   height: 56px;
   width: 100%;
   border: 1px solid $price-border-color;
+  box-sizing: border-box;
   border-radius: 4px;
   margin-bottom: 36px;
 
@@ -16,6 +17,11 @@
 
   img {
     margin: 0 16px;
+  }
+
+  @media screen and (min-width: $small-screen-width) {
+    width: 160px;
+    margin-bottom: 0;
   }
 }
 

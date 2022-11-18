@@ -1,0 +1,112 @@
+.plan__stepper-container {
+  @media screen and (min-width: $small-screen-width) {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 20%;
+    z-index: -999;
+    background-color: $main-background-color;
+  }
+}
+
+.plan__step-icon {
+  margin-right: 12px;
+}
+
+.plan__step {
+  text-transform: uppercase;
+  margin-right: 16px;
+  font-size: 10px;
+  font-weight: bold;
+  color: $text-default-color;
+}
+
+.plan__progress {
+  height: 6px;
+  background-color: $progress-color;
+  border-radius: 4px;
+  flex-grow: 100;
+}
+
+.plan__stepper--small {
+  height: 48px;
+  padding: 0 32px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-bottom: 1px solid $bar-border-color;
+  box-sizing: border-box;
+}
+
+.plan__stepper--large {
+  padding-top: 116px;
+  padding-left: 30%;
+}
+
+.circle {
+  border: 1px solid $price-border-color;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 100%;
+  color: $price-border-color;
+  text-align: center;
+
+  /* Vertical Line */
+  &:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    top: 1px;
+    right: 50%;
+    bottom: 1px;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+    transform: scale(1, 2);
+    transform-origin: 50% -100%;
+    border-left: 1px dotted $input-border-color;
+    z-index: -1;
+  }
+}
+
+.step {
+  position: relative;
+  min-height: 16px;
+  color: $input-placeholder-color;
+
+  & + .step {
+    margin-top: 44px;
+  }
+
+  & > div:first-child {
+    position: static;
+    height: 0;
+  }
+
+  & > div:not(:first-child) {
+    margin-left: 24px;
+    padding-left: 16px;
+  }
+
+  &:last-child .circle:after {
+    display: none;
+  }
+
+  &.step-active {
+    color: $text-subtitle-color;
+  }
+  &.step-active .circle {
+    background-color: $phone-color;
+    color: $text-stepper-color;
+  }
+}
+
+.title {
+  font-size: 16px;
+  line-height: 24px;
+}

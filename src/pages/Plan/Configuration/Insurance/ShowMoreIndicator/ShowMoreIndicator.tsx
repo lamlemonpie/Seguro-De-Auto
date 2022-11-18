@@ -1,6 +1,6 @@
 import React from "react";
-import arrowUpGray from "../../../../shared/assets/arrow-up-gray.png";
-import arrowDownBlue from "../../../../shared/assets/arrow-down-blue.png";
+import arrowUpGray from "../../../../../shared/assets/arrow-up-gray.png";
+import arrowDownBlue from "../../../../../shared/assets/arrow-down-blue.png";
 
 interface ShowMoreIndicatorProps {
   showMore?: boolean;

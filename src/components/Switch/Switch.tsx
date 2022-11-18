@@ -4,21 +4,15 @@ import switchOff from "../../shared/assets/switch-off.png";
 
 interface SwitchProps {
   isOn?: boolean;
+  onClick?: () => void;
 }
 
-export const Switch: React.FC<SwitchProps> = ({ isOn = false }) => {
-  const [active, setActive] = React.useState(isOn);
-
-  const handleChangeActive = () => {
-    setActive(!active);
-  };
-
+export const Switch: React.FC<SwitchProps> = ({ isOn = false, onClick }) => {
   return (
-    <div>
+    <div onClick={onClick}>
       <img
-        src={active ? switchOn : switchOff}
-        alt={active ? "switch on" : "switch off"}
-        onClick={handleChangeActive}
+        src={isOn ? switchOn : switchOff}
+        alt={isOn ? "switch on" : "switch off"}
       />
     </div>
   );

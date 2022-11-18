@@ -1,0 +1,357 @@
+.plan__configuration-container {
+  @media screen and (min-width: $small-screen-width) {
+    width: 384px;
+    margin-left: 25%;
+  }
+}
+
+.plan__description-container {
+  height: 340px;
+  background-color: $main-background-color;
+  padding: 0 32px;
+  position: relative;
+  z-index: -999;
+
+  @media screen and (min-width: $small-screen-width) {
+    background: none;
+    padding: 0;
+  }
+}
+
+.plan__description-title {
+  font-size: 28px;
+  color: $text-subtitle-color;
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 8px;
+}
+
+.plan__description-title--small {
+  @extend .plan__description-title;
+
+  @media screen and (min-width: $small-screen-width) {
+    display: none;
+  }
+}
+
+.plan__description-title--large {
+  @extend .plan__description-title;
+
+  span {
+    color: $text-primary-color;
+  }
+  padding-top: 0;
+
+  @media screen and (max-width: $small-screen-width) {
+    display: none;
+  }
+}
+
+.plan__description-subtitle {
+  font-size: 16px;
+  color: $text-default-color;
+  margin: 0;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: $small-screen-width) {
+    padding-bottom: 34px;
+  }
+}
+
+.plan__car-background {
+  height: 148px;
+  width: calc(100vw - 64px);
+  left: 32px;
+  top: 123px;
+  background-color: $card-background-color;
+  border-radius: 16px;
+
+  filter: drop-shadow(0px 0px 10px rgba(163, 171, 204, 0.12));
+
+  position: absolute;
+  z-index: 1;
+
+  @media screen and (min-width: $small-screen-width) {
+    width: 384px;
+    filter: none;
+    left: 0;
+    top: 150px;
+    border: 3px solid $car-border-color;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+}
+
+.plan__car-container {
+  height: 156px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 999;
+}
+
+.plan__car-description {
+  display: flex;
+  flex-direction: column;
+  padding-top: 52px;
+  padding-left: 24px;
+}
+
+.plan__car-plate {
+  font-size: 12px;
+  color: $input-placeholder-color;
+  margin: 0;
+}
+
+.plan__car-model {
+  font-size: 16px;
+  color: $text-subtitle-color;
+  margin: 0;
+
+  @media screen and (min-width: $small-screen-width) {
+    font-size: 20px;
+    width: 192px;
+  }
+}
+
+.plan__insurance-container {
+  padding: 0 32px;
+  margin-top: 44px;
+
+  @media screen and (min-width: $small-screen-width) {
+    padding: 0;
+    margin-top: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 43px;
+  }
+}
+
+.plan__insurance-title {
+  margin: 0;
+  margin-bottom: 4px;
+
+  font-size: 16px;
+  color: $text-subtitle-color;
+}
+
+.plan__insurance-range {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $small-screen-width) {
+    margin-bottom: 0;
+  }
+}
+
+.plan__insurance-value {
+  margin: 0;
+
+  font-size: 12px;
+  color: $text-default-color;
+}
+
+.plan__vertical-divider {
+  width: 1px;
+  background-color: $input-border-color;
+
+  margin: 0 12px;
+}
+
+.plan__divider {
+  @media screen and (min-width: $small-screen-width) {
+    width: 100%;
+    height: 1px;
+    background-color: $input-border-color;
+    margin-bottom: 55px;
+  }
+}
+
+.plan__coverage-title {
+  font-size: 20px;
+  color: $text-subtitle-color;
+
+  padding: 0 32px;
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $small-screen-width) {
+    padding: 0;
+  }
+}
+
+.plan__coverage-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  text-transform: uppercase;
+  font-size: 10px;
+  text-align: center;
+  font-weight: 700;
+
+  height: 56px;
+
+  border-bottom: 1px solid $input-border-color;
+  box-sizing: border-box;
+
+  div {
+    padding: 0 12px 0px 12px;
+    letter-spacing: 0.8px;
+    width: 120px;
+  }
+}
+
+.plan__tab--default {
+  color: $text-subtitle-color;
+}
+
+.plan__tab--selected {
+  color: $text-primary-color;
+
+  border-bottom: 2px solid $text-primary-color;
+}
+
+.plan__car-coverage {
+  padding: 0 32px;
+
+  margin-top: 32px;
+  margin-bottom: 106px;
+
+  @media screen and (min-width: $small-screen-width) {
+    padding: 0;
+  }
+}
+
+.plan__insurance_container {
+  border-bottom: 1px solid $input-border-color;
+
+  margin-bottom: 24px;
+
+  @media screen and (min-width: $small-screen-width) {
+    padding-bottom: 32px;
+  }
+}
+
+.plan__insurance-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.plan__insurance-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.plan__insurance-icon {
+  width: 40px;
+  height: 40px;
+
+  margin-right: 16px;
+}
+
+.plan__insurance-name {
+  margin: 0;
+  font-size: 16px;
+  color: $text-subtitle-color;
+
+  width: 157px;
+}
+
+.plan__insurance-text {
+  margin: 0;
+  padding-left: 56px;
+
+  font-size: 14px;
+  color: $text-default-color;
+
+  @media screen and (min-width: $small-screen-width) {
+    padding-top: 16px;
+  }
+}
+
+.plan__insurance-more {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+
+  padding-left: 56px;
+
+  p {
+    margin: 0;
+    margin-right: 8px;
+  }
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &.active {
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  &.inactive {
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+}
+
+.plan__more--active {
+  color: $input-placeholder-color;
+}
+
+.plan__more--inactive {
+  color: $phone-color;
+}
+
+.plan__insurance-status-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  * {
+    margin-right: 12px;
+  }
+
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: $phone-color;
+
+  padding-left: 56px;
+}
+
+.plan__back-container {
+  display: none;
+
+  @media screen and (min-width: $small-screen-width) {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $input-placeholder-color;
+
+    p {
+      margin: 0;
+    }
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    * {
+      margin-right: 16px;
+    }
+  }
+}
